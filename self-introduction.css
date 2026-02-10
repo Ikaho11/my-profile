@@ -1,0 +1,279 @@
+@keyframes breathe {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 1; }
+}
+
+body {
+  background: linear-gradient(135deg, #e9ecef 0%, #dee2e6 100%);
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: #495057;
+}
+
+.header-box {
+  width: 80%;
+  max-width: 500px;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.6);
+  margin-top: 20px;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #888;
+  font-size: 14px;
+}
+
+.header-hint {
+  animation: breathe 3s ease-in-out infinite;
+}
+
+.container {
+  width: 90%;
+  max-width: 650px;
+  background-color: #ffffff;
+  margin: 30px auto;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.icon-container {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.profile-icon {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #fff;
+  transition: transform 0.4s ease;
+  cursor: pointer;
+}
+
+.icon-container:hover .profile-icon {
+  transform: scale(1.1) rotate(2deg);
+}
+
+.sub-text {
+  color: #888;
+  font-size: 14px;
+  margin-top: -5px;
+  margin-bottom: 30px;
+}
+
+h3 {
+  font-size: 18px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 5px;
+  text-align: left;
+  margin-top: 25px;
+}
+
+.vertical-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.has-tooltip {
+  position: relative;
+  margin: 10px 0;
+  padding: 8px 15px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  width: fit-content;
+  font-size: 14px;
+  color: #6c757d;
+  cursor: help;
+  transition: 0.3s;
+}
+
+.has-tooltip:hover {
+  background-color: #e9ecef;
+}
+
+.conan-trigger a {
+  text-decoration: none;
+  color: #6c757d;
+  transition: 0.3s;
+}
+
+.conan-active {
+  background-color: #343a40 !important;
+}
+
+.conan-active a {
+  color: #fff !important; 
+}
+
+.tooltip-right, .tooltip {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  background-color: #555;
+  color: #fff;
+  padding: 6px 15px;
+  border-radius: 20px;
+  font-size: 12px;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+  z-index: 100;
+  pointer-events: none;
+}
+
+.tooltip-right {
+  left: 105%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.tooltip {
+  bottom: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.is-visible {
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.tooltip-right.is-visible {
+  left: 115% !important;
+}
+
+.tooltip.is-visible {
+  bottom: 120% !important;
+}
+
+.info-card {
+  text-align: left;
+  background-color: #fcfcfc;
+  padding: 20px;
+  border-radius: 15px;
+  margin-top: 25px;
+  border: 1px solid #f0f0f0;
+}
+
+.info-card h3 {
+  margin-top: 0;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.tag-container {
+  margin: 15px 0;
+}
+
+.tag {
+  display: inline-block;
+  background-color: #e9ecef;
+  color: #495057;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.learning-desc, .style-text {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #666;
+}
+
+.dream-section {
+  background-color: #f8f9fa;
+  border-left: 5px solid #6c757d;
+  padding: 25px;
+  margin: 40px 0;
+  border-radius: 0 15px 15px 0;
+  text-align: left;
+}
+
+.dream-section p, .dream-detail {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #6c757d;
+}
+
+.dream-section strong:last-of-type {
+  color: #343a40;
+  text-shadow: 0 0 8px rgba(173, 181, 189, 0.4);
+}
+
+.closing-remark {
+  margin-top: 40px;
+  font-size: 14px;
+  color: #adb5bd;
+}
+
+.vertical-list {
+  padding: 0;
+  margin: 15px 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; 
+  width: 100%;
+}
+
+h3 {
+  font-size: 18px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 8px;
+  text-align: left;
+  margin-top: 30px;
+  width: 100%; 
+}
+
+.has-tooltip {
+  position: relative;
+  margin: 8px 0;
+  padding: 10px 15px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #6c757d;
+  cursor: help;
+  transition: 0.3s;
+  margin-left: 5px; 
+}
+
+.tooltip-right {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  left: 105%;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #555;
+  color: #fff;
+  padding: 6px 15px;
+  border-radius: 20px;
+  font-size: 12px;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+  z-index: 100;
+  pointer-events: none;
+}
+
+.is-visible {
+  visibility: visible !important;
+  opacity: 1 !important;
+  left: 112% !important; 
+}
